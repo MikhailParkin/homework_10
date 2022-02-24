@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ object.title }}
+{% endblock %}
+
+{% block body %}
+<h1>{{ object.title }}</h1>
+  <div
+          class='body'>{{ object.body|safe }}
+  </div>
+
+
+
+    <div>
+        <a class="btn btn-primary my-2" href="{% url 'authors:posts_list' %}">Back</a>
+    </div>
+
+{% endblock %}
