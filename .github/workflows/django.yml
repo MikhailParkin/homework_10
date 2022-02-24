@@ -28,7 +28,8 @@ jobs:
     - name: Generate Report
       run: |
         pip install coverage
-        coverage run -m unittest
+        cd blog
+        coverage run -m manage.py test
 
     - uses: actions/checkout@master
     - uses: codecov/codecov-action@v2
