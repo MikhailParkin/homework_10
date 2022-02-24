@@ -33,6 +33,9 @@ jobs:
         coverage run --source='.' manage.py test
         pwd
         ls -al
+        cd .coverage
+        pwd
+        ls -al
 
     - name: Upload coverage results to Codecov.io
       uses: codecov/codecov-action@v2
