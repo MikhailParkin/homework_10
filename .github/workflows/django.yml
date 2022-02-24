@@ -35,10 +35,9 @@ jobs:
         ls -al
 
     - name: Upload coverage results to Codecov.io
-      run: |
-        cd blog
       uses: codecov/codecov-action@v2
       with:
         version: 'v0.1.15'
+        files: ./blog/
         name: codecov-homework
         verbose: true
