@@ -29,6 +29,7 @@ jobs:
 
     - name: Generate Report
       run: |
+        cd blog
         coverage run --source='.' manage.py test
 
     - uses: actions/checkout@master
