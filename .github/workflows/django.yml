@@ -32,11 +32,8 @@ jobs:
         cd blog
         coverage run --source='.' manage.py test
 
-    - uses: actions/checkout@master
-    - uses: codecov/codecov-action@v2
+    - name: Upload coverage results to Codecov.io
+      uses: codecov/codecov-action@v2
       with:
-        files: ./coverage1.xml,./coverage2.xml # optional
-        flags: unittests # optional
-        name: codecov-umbrella # optional
-        fail_ci_if_error: true # optional (default = false)
-        verbose: true # optional (default = false)
+        token: ${{secrets.CODECOV_TOKEN}}
+        version: "v0.1.15"
