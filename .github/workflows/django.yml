@@ -25,10 +25,6 @@ jobs:
       run: |
         cd blog
         python manage.py test
-    - name: npm install, make test-coverage
-      run: |
-        npm install
-        make test-coverage
 
     - name: Generate coverage report
       run: |
