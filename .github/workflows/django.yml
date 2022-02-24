@@ -31,15 +31,13 @@ jobs:
       run: |
         cd blog
         coverage run --source='.' manage.py test
+        pwd
+        ls -al
 
     - name: Upload coverage results to Codecov.io
       uses: codecov/codecov-action@v2
       with:
-        token: ${{secrets.CODECOV_TOKEN}}
-        version: "v0.1.15"
-        directory: ./blog/coverage/reports/
-        env_vars: OS,PYTHON
-        fail_ci_if_error: true
+        version: 'v0.1.15'
         files: ./coverage1.xml,./coverage2.xml
         name: codecov-homework
         verbose: true
