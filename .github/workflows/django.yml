@@ -38,6 +38,6 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         version: 'v0.1.15'
-        files: ./blog/
+        files: ./blog/.coverage
         name: codecov-homework
         verbose: true
