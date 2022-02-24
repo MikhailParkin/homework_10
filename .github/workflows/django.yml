@@ -21,6 +21,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        pip install coverage
     - name: Run Tests
       run: |
         cd blog
@@ -28,7 +29,6 @@ jobs:
 
     - name: Generate Report
       run: |
-        pip install coverage
         coverage run -m manage.py test
 
     - uses: actions/checkout@master
