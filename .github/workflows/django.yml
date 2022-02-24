@@ -25,6 +25,7 @@ jobs:
       run: |
         cd blog
         python manage.py test
+
     - name: Generate Report
       run: |
         pip install coverage
